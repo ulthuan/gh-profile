@@ -5,11 +5,13 @@ go 1.20
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.6
 	github.com/jedib0t/go-pretty/v6 v6.4.5
+	github.com/nyaosorg/go-windows-junction v0.1.0
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/viper v1.15.0
 )
 
 require (
+	github.com/Microsoft/go-winio v0.5.2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect

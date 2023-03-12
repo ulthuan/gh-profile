@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"github.com/gabe565/gh-profile/internal/github"
 	"github.com/gabe565/gh-profile/internal/util"
+	"github.com/nyaosorg/go-windows-junction"
 	"io"
 	"os"
 	"os/exec"
@@ -206,7 +207,9 @@ func (p Profile) ActivateGlobally(force bool) error {
 	}
 
 	// Symlink profile hosts
-	if err := os.Symlink(p.HostsPath(), github.RootHostsPath()); err != nil {
+	if err := junction.Create(p.HostsPath(), github.RootHostsPath()); err !=nil {
+	
+	//if err := os.Symlink(p.HostsPath(), github.RootHostsPath()); err != nil {
 		return err
 	}
 
